@@ -5,6 +5,7 @@ export default{
         },
     },
     build: {
-        outDir: './docs'
+        outDir: './docs',
+        base: '/<REPO>/'
     }
 };
