@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebGL</title>
+    <script type="module" src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="canvas-container">
+        <canvas id="webgl-canvas"></canvas>
+      </div>
+      <div class="input-containers">
+        <div class="files-container">
+          <div class="file-container">
+            <label for="model-input">Model File</label>
+            <input id="model-input" type="file" accept=".obj"/>
+          </div>
+          <div class="file-container">
+            <label for="texture-input">Texture Image File</label>
+            <input id="texture-input" type="file" accept="image/*"/>
+          </div>
+          <div class="file-container">
+            <div class="checkbox-container">
+              <label style="width: 100px;" for="reverse-text-x">Flip Texture X</label>
+              <input id="reverse-tex-x" class="texture-checkbox" type="checkbox"/>
+            </div>
+            <div class="checkbox-container">
+              <label style="width: 100px;" for="reverse-text-y">Flip Texture Y</label>
+              <input id="reverse-tex-y" class="texture-checkbox" type="checkbox"/>
+            </div>
+          </div>
+        </div>
+        <div id="buttons" class="buttons-container"> 
+          <label for="default-shader">Shaders</label>
+          <div class="button-container"> 
+            <button id="default-shader" class="shader-button">Default Shader</button>
+          </div>
+          <div class="button-container">
+            <button id="white-shader" class="shader-button">White Shader</button>
+          </div>
+          <div class="button-container">
+            <button id="normals-shader" class="shader-button">Normals Shader</button>
+          </div>
+          <div class="button-container">
+            <button id="toon-shader" class="shader-button">Toon Shader</button>
+          </div>
+        </div>
+        <div class="sliders-container">
+          <div class="slider-container">
+            <label for="x-slider">X Position</label>
+            <div class="slider-row">
+              <input id="x-slider" class="position-slider" type="range" min="-20" max="20" value="0" step="0.05"/>
+              <output id="x-output">0</output>
+            </div>
+          </div>
+          <div class="slider-container">
+            <label for="y-slider">Y Position</label>
+            <div class="slider-row">
+              <input id="y-slider" class="position-slider" type="range" min="-20" max="20" value="0" step="0.05"/>
+              <output id="y-output">0</output>
+            </div>
+          </div>
+          <div class="slider-container">
+            <label for="z-slider">Z Position</label>
+            <div class="slider-row">
+              <input id="z-slider" class="position-slider" type="range" min="-20" max="20" value="0" step="0.05"/>
+              <output id="z-output">0</output>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info-container">
+        <div class="info">
+          <p class="info-text">*Only accepts models in .obj format</p>
+          <p class="info-text">*Please provide .obj files containing vertices, texture coordinates, and normals for best results</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
