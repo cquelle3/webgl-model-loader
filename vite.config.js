@@ -1,4 +1,5 @@
 export default{
+    base: '/webgl-model-loader/',
     esbuild: {
         supported: {
             'top-level-await': true
@@ -6,6 +7,5 @@ export default{
     },
     build: {
         outDir: './docs',
-        base: '/<REPO>/'
     }
 };
